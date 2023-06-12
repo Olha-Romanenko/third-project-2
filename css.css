@@ -1,0 +1,216 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header-landify {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.logo-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav-header {
+   
+}
+
+.menu  {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 282px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    font-feature-settings: 'liga' off;
+    color: #111827;
+}
+
+.download-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-right: 28px;
+    width: 280px;
+}
+
+.header-tab {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    width: 1200px;
+    padding: 40px;
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
+    box-sizing: border-box;
+}
+
+.main-logo-desk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    width: 100%;
+}
+
+.main-logo-grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    grid-gap: 20px;
+    grid-template-areas: 
+    'airbnb walmart google microsoft hubspot fedex';
+    
+}
+.airbnb {
+    grid-area: airbnb;
+}
+.hubspot {
+    grid-area: hubspot;
+}
+.google {
+    grid-area: google;
+}
+.microsoft {
+    grid-area: microsoft;
+}
+.walmart {
+    grid-area: walmart;
+}
+.fedex {
+    grid-area: fedex;
+}
+@media only screen and (min-width: 1440px) {
+    /* Десктоп  */
+    .menu-tab {
+        display: none;
+    }
+    .main-logo-tab {
+        display: none;
+    }
+    .main-logo-desk {
+        display: flex;
+    }
+
+    .main-logo-tab {
+        display: none;
+    }
+
+    .main-logo-mob {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1440px) {
+    /* Планшет */
+    main {
+        max-width: 1440px;
+        width: 100%;
+    }
+    .header-landify {
+        width: 100%;
+    }
+    .menu {
+        display: none;
+    }
+    .main-logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        justify-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .main-logo img {
+        margin: 0 60px;
+    }
+    .main-logo-desk {
+        display: none;
+    }
+
+    .main-logo-tab {
+        display: flex;
+    }
+
+    .main-logo-mob {
+        display: none;
+    }
+
+    .main-logo-grid {
+        grid-template-rows: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        grid-gap: 20px;
+        grid-template-areas: 
+            'airbnb walmart google microsoft'
+            '. hubspot fedex .'
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Мобилка */
+    .download-header {
+        display: none;
+    }
+    .main-logo-desk {
+        display: none;
+    }
+
+    .main-logo-tab {
+        display: none;
+    }
+
+    .main-logo {
+        justify-content: center;
+    }
+
+    .main-logo-mob {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main-logo-mob img {
+        margin: 20px;
+    }
+    .logo-mob-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-logo-grid {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        grid-gap: 20px;
+        grid-template-areas: 
+        'airbnb walmart '
+        'microsoft hubspot'
+        ' google fedex';
+    }
+}
+
