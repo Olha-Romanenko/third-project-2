@@ -4,6 +4,15 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
 .header-landify {
     display: flex;
     justify-items: center;
@@ -82,7 +91,6 @@ body {
     grid-gap: 20px;
     grid-template-areas: 
     'airbnb walmart google microsoft hubspot fedex';
-    
 }
 .airbnb {
     grid-area: airbnb;
@@ -102,6 +110,167 @@ body {
 .fedex {
     grid-area: fedex;
 }
+
+.features{
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.features-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.features-text-header {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: -0.025em;
+    font-feature-settings: 'liga' off;
+    color: #111827;
+    width: 800px;
+    margin-block-end: 0;
+    margin-block-start: 96px;
+}
+.features-text-discription {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #111827;
+    width: 800px;
+
+}
+.features-blocks {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-gap: 60px;
+    margin-top: 64px;
+    width: 1200px;
+}
+.features-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.features-header {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #111827;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+.features-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #374151;
+
+}
+
+.metrics {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    margin-top: 91px;
+}
+
+.metrics-left {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 592px;
+}
+
+.metrics-left-header {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: -0.025em;
+    font-feature-settings: 'liga' off;
+    color: #111827;
+}
+
+.metrics-left-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    font-feature-settings: 'liga' off;
+    color: #111827;
+
+}
+.metrics-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: flex-start;
+    margin-top: 80px;
+    width: 592px;
+}
+.metrics-block {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.metrics-info {
+    margin-left: 24px;
+}
+
+.metrics-numbers {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.025em;
+    font-feature-settings: 'liga' off;
+    color: #111827;
+}
+
+.metrics-discription {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: 'liga' off;
+    color: #111827;
+    margin-bottom: 40px;
+}
+
 @media only screen and (min-width: 1440px) {
     /* Десктоп  */
     .menu-tab {
@@ -167,6 +336,28 @@ body {
             'airbnb walmart google microsoft'
             '. hubspot fedex .'
     }
+
+    .features-blocks {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        width: auto;
+    }
+
+    .features-text-header  {
+        width: auto;
+    }
+
+    .features-text-discription {
+        width: auto;
+    }
+
+    .metrics {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -212,5 +403,46 @@ body {
         'microsoft hubspot'
         ' google fedex';
     }
-}
+    .features-blocks {
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        width: auto;
+    }
+    .metrics-left {
+        width: auto;
+    }
+    .metrics {
+        align-items: flex-start;
+        margin: 50px 20px;
+    }
+    .metrics-right {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        width: auto;
+        justify-items: flex-start;
+    }
 
+    .metrics-numbers {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        font-feature-settings: 'liga' off;
+        color: #111827;
+    }
+
+    .metrics-left-header {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .metrics-left-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+}
